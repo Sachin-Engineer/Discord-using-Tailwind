@@ -1,122 +1,10 @@
 /*! tailwindcss v4.1.4 | MIT License | https://tailwindcss.com */
 @layer properties;
 @font-face {
-  font-family: Whitney;
-  font-weight: 300;
-  src: url(fonts/Whitney/Whitney-300.woff) format("woff");
-}
-@font-face {
-  font-family: Whitney;
-  font-weight: 400;
-  src: url(fonts/Whitney/Whitney-400.woff) format("woff");
-}
-@font-face {
-  font-family: Whitney;
-  font-weight: 500;
-  src: url(fonts/Whitney/Whitney-500.woff) format("woff");
-}
-@font-face {
-  font-family: Whitney;
-  font-weight: 600;
-  src: url(fonts/Whitney/Whitney-600.woff) format("woff");
-}
-@font-face {
-  font-family: Whitney;
-  font-weight: 700;
-  src: url(fonts/Whitney/Whitney-700.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 300;
-  src: url(fonts/Ginto/Ginto-300.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 400;
-  src: url(fonts/Ginto/Ginto-400.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 500;
-  src: url(fonts/Ginto/Ginto-500.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  src: url(fonts/Ginto/Ginto-600.woff) format("woff");
-  font-weight: 600;
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 700;
-  src: url(fonts/Ginto/Ginto-700.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 300;
-  font-style: italic;
-  src: url(fonts/Ginto/Ginto-300-italic.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 400;
-  font-style: italic;
-  src: url(fonts/Ginto/Ginto-400-italic.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 500;
-  font-style: italic;
-  src: url(fonts/Ginto/Ginto-500-italic.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 600;
-  font-style: italic;
-  src: url(fonts/Ginto/Ginto-600-italic.woff) format("woff");
-}
-@font-face {
-  font-family: Ginto;
-  font-weight: 700;
-  font-style: italic;
-  src: url(fonts/Ginto/Ginto-700-italic.woff) format("woff");
-}
-@font-face {
-  font-family: GintoNord;
-  font-weight: 500;
-  src: url(fonts/Ginto-Nord/Ginto-Nord-500.woff2) format("woff2"),
-    url(fonts/Ginto-Nord/Ginto-Nord-500.woff) format("woff");
-}
-@font-face {
-  font-family: GintoNord;
-  font-weight: 600;
-  src: url(fonts/Ginto-Nord/Ginto-Nord-600.woff2) format("woff2"),
-    url(fonts/Ginto-Nord/Ginto-Nord-600.woff) format("woff");
-}
-@font-face {
   font-family: GintoNord;
   font-weight: 700;
-  src: url(fonts/Ginto-Nord/Ginto-Nord-700.woff2) format("woff2"),
-    url(fonts/Ginto-Nord/Ginto-Nord-700.woff) format("woff");
-}
-@font-face {
-  font-family: "ggSans";
-  font-weight: 400;
-  src: url(fonts/gg-sans/ggsans-Normal.ttf);
-}
-@font-face {
-  font-family: "ggSans";
-  font-weight: 500;
-  src: url(fonts/gg-sans/ggsans-Medium.ttf);
-}
-@font-face {
-  font-family: "ggSans";
-  font-weight: 600;
-  src: url(fonts/gg-sans/ggsans-Semibold.ttf);
-}
-@font-face {
-  font-family: "ggSans";
-  font-weight: 700;
-  src: url(fonts/gg-sans/ggsans-Bold.ttf);
+  src: url(./fonts/Ginto-Nord/Ginto-Nord-700.woff2) format("woff2"),
+    url(./fonts/Ginto-Nord/Ginto-Nord-700.woff) format("woff");
 }
 @layer theme, base, components, utilities;
 @layer theme {
@@ -125,11 +13,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-ggSans: "ggSans", sans-serif;
   }
 }
 @layer base {
@@ -278,11 +166,50 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .relative {
     position: relative;
   }
+  .top-auto {
+    top: auto;
+  }
+  .right-\[0\%\] {
+    right: 0%;
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-\[0\%\] {
+    left: 0%;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-11 {
+    z-index: 11;
+  }
+  .z-100 {
+    z-index: 100;
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-\[-10\%\] {
+    margin-top: -10%;
+  }
+  .mr-\[-150px\] {
+    margin-right: -150px;
+  }
+  .-ml-20 {
+    margin-left: calc(var(--spacing) * -20);
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
@@ -296,6 +223,12 @@
   .h-\[72px\] {
     height: 72px;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[90\%\] {
+    width: 90%;
+  }
   .w-\[124px\] {
     width: 124px;
   }
@@ -305,8 +238,14 @@
   .max-w-\[1200px\] {
     max-width: 1200px;
   }
+  .max-w-\[2600px\] {
+    max-width: 2600px;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -314,14 +253,26 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-end {
+    justify-content: flex-end;
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
   .bg-\[\#404EED\] {
     background-color: #404EED;
+  }
+  .bg-\[\#23272a\] {
+    background-color: #23272a;
   }
   .bg-white {
     background-color: var(--color-white);
@@ -335,14 +286,34 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .font-ggSans {
-    font-family: var(--font-ggSans);
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .pt-\[50px\] {
+    padding-top: 50px;
+  }
+  .text-left {
+    text-align: left;
   }
   .text-\[14px\] {
     font-size: 14px;
   }
   .text-\[16px\] {
     font-size: 16px;
+  }
+  .text-\[23px\] {
+    font-size: 23px;
+  }
+  .text-\[56px\] {
+    font-size: 56px;
+  }
+  .leading-\[26px\] {
+    --tw-leading: 26px;
+    line-height: 26px;
+  }
+  .font-\[400\] {
+    --tw-font-weight: 400;
+    font-weight: 400;
   }
   .font-\[500\] {
     --tw-font-weight: 500;
@@ -352,14 +323,28 @@
     --tw-font-weight: 600;
     font-weight: 600;
   }
+  .font-\[800\] {
+    --tw-font-weight: 800;
+    font-weight: 800;
+  }
   .text-\[\#2c2f33\] {
     color: #2c2f33;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-white {
     color: var(--color-white);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .hover\:text-\[\#404EED\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #404EED;
+      }
+    }
   }
   .hover\:underline {
     &:hover {
@@ -368,14 +353,80 @@
       }
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:w-\[70\%\] {
+    @media (width >= 48rem) {
+      width: 70%;
+    }
+  }
+  .md\:text-\[20px\] {
+    @media (width >= 48rem) {
+      font-size: 20px;
+    }
+  }
+  .md\:leading-\[32\.5px\] {
+    @media (width >= 48rem) {
+      --tw-leading: 32.5px;
+      line-height: 32.5px;
+    }
+  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
     }
   }
+  .xl\:flex {
+    @media (width >= 80rem) {
+      display: flex;
+    }
+  }
+  .xl\:hidden {
+    @media (width >= 80rem) {
+      display: none;
+    }
+  }
+  .xl\:h-\[555px\] {
+    @media (width >= 80rem) {
+      height: 555px;
+    }
+  }
+  .xl\:w-\[90\%\] {
+    @media (width >= 80rem) {
+      width: 90%;
+    }
+  }
+  .xl\:max-w-\[900px\] {
+    @media (width >= 80rem) {
+      max-width: 900px;
+    }
+  }
+  .xl\:justify-center {
+    @media (width >= 80rem) {
+      justify-content: center;
+    }
+  }
   .xl\:px-0 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:pt-\[120px\] {
+    @media (width >= 80rem) {
+      padding-top: 120px;
+    }
+  }
+  .xl\:text-center {
+    @media (width >= 80rem) {
+      text-align: center;
     }
   }
 }
@@ -396,6 +447,10 @@
   inherits: false;
 }
 @property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-leading {
   syntax: "*";
   inherits: false;
 }
@@ -464,6 +519,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-blur: initial;
       --tw-brightness: initial;
