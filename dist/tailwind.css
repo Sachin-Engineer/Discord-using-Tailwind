@@ -23,6 +23,7 @@
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-Ginto-Nord: GintoNord, sans-serif;
     --font-ggsans: "ggSans", sans-serif;
   }
 }
@@ -238,6 +239,9 @@
   .h-\[72px\] {
     height: 72px;
   }
+  .w-\[9\] {
+    width: 9;
+  }
   .w-\[70\%\] {
     width: 70%;
   }
@@ -298,6 +302,12 @@
   .bg-\[\#23272a\] {
     background-color: #23272a;
   }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-\[\#f6f6f6\] {
+    background-color: #f6f6f6;
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -313,6 +323,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-14 {
+    padding-block: calc(var(--spacing) * 14);
+  }
   .py-\[144px\] {
     padding-block: 144px;
   }
@@ -321,6 +334,9 @@
   }
   .text-left {
     text-align: left;
+  }
+  .font-Ginto-Nord {
+    font-family: var(--font-Ginto-Nord);
   }
   .font-ggsans {
     font-family: var(--font-ggsans);
@@ -442,6 +458,16 @@
       flex-direction: row;
     }
   }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:py-36 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 36);
+    }
+  }
   .md\:text-\[20px\] {
     @media (width >= 48rem) {
       font-size: 20px;
@@ -462,6 +488,12 @@
     @media (width >= 48rem) {
       --tw-leading: 32.5px;
       line-height: 32.5px;
+    }
+  }
+  .md\:leading-\[57\.6pox\] {
+    @media (width >= 48rem) {
+      --tw-leading: 57.6pox;
+      line-height: 57.6pox;
     }
   }
   .md\:leading-\[57\.6px\] {
