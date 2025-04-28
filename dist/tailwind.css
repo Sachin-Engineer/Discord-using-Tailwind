@@ -208,6 +208,12 @@
   .mt-\[-10\%\] {
     margin-top: -10%;
   }
+  .mt-\[24\[x\]\] {
+    margin-top: 24[x];
+  }
+  .mt-\[24\] {
+    margin-top: 24;
+  }
   .mt-\[24px\] {
     margin-top: 24px;
   }
@@ -365,6 +371,9 @@
   .text-\[\#2c2f33\] {
     color: #2c2f33;
   }
+  .text-\[20\] {
+    color: 20;
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -461,6 +470,12 @@
       line-height: 57.6px;
     }
   }
+  .md\:leading-\[57\.\] {
+    @media (width >= 48rem) {
+      --tw-leading: 57.;
+      line-height: 57.;
+    }
+  }
   .md\:leading-\[57\] {
     @media (width >= 48rem) {
       --tw-leading: 57;
@@ -495,6 +510,11 @@
   .xl\:w-\[70\%\] {
     @media (width >= 80rem) {
       width: 70%;
+    }
+  }
+  .xl\:w-\[70\] {
+    @media (width >= 80rem) {
+      width: 70;
     }
   }
   .xl\:w-\[80\%\] {
