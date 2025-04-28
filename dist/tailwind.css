@@ -6,6 +6,11 @@
   src: url(./fonts/Ginto-Nord/Ginto-Nord-700.woff2) format("woff2"),
     url(./fonts/Ginto-Nord/Ginto-Nord-700.woff) format("woff");
 }
+@font-face {
+  font-family: "ggSans";
+  font-weight: 500;
+  src: url(fonts/gg-sans/ggsans-Medium.ttf);
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -18,6 +23,7 @@
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-ggsans: "ggSans", sans-serif;
   }
 }
 @layer base {
@@ -202,6 +208,9 @@
   .mt-\[-10\%\] {
     margin-top: -10%;
   }
+  .mt-\[24px\] {
+    margin-top: 24px;
+  }
   .mr-\[-150px\] {
     margin-right: -150px;
   }
@@ -229,6 +238,12 @@
   .w-\[90\%\] {
     width: 90%;
   }
+  .w-\[95\%\] {
+    width: 95%;
+  }
+  .w-\[95\] {
+    width: 95;
+  }
   .w-\[124px\] {
     width: 124px;
   }
@@ -252,6 +267,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
@@ -289,11 +307,17 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-\[144px\] {
+    padding-block: 144px;
+  }
   .pt-\[50px\] {
     padding-top: 50px;
   }
   .text-left {
     text-align: left;
+  }
+  .font-ggsans {
+    font-family: var(--font-ggsans);
   }
   .text-\[14px\] {
     font-size: 14px;
@@ -301,11 +325,18 @@
   .text-\[16px\] {
     font-size: 16px;
   }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
   .text-\[23px\] {
     font-size: 23px;
   }
   .text-\[56px\] {
     font-size: 56px;
+  }
+  .leading-\[24px\] {
+    --tw-leading: 24px;
+    line-height: 24px;
   }
   .leading-\[26px\] {
     --tw-leading: 26px;
@@ -322,6 +353,10 @@
   .font-\[600\] {
     --tw-font-weight: 600;
     font-weight: 600;
+  }
+  .font-\[700\] {
+    --tw-font-weight: 700;
+    font-weight: 700;
   }
   .font-\[800\] {
     --tw-font-weight: 800;
@@ -353,6 +388,21 @@
       }
     }
   }
+  .sm\:text-\[20px\] {
+    @media (width >= 40rem) {
+      font-size: 20px;
+    }
+  }
+  .sm\:text-\[28px\] {
+    @media (width >= 40rem) {
+      font-size: 28px;
+    }
+  }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
@@ -363,9 +413,24 @@
       display: none;
     }
   }
+  .md\:w-\[50\%\] {
+    @media (width >= 48rem) {
+      width: 50%;
+    }
+  }
+  .md\:w-\[50\] {
+    @media (width >= 48rem) {
+      width: 50;
+    }
+  }
   .md\:w-\[70\%\] {
     @media (width >= 48rem) {
       width: 70%;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
     }
   }
   .md\:text-\[20px\] {
@@ -373,10 +438,33 @@
       font-size: 20px;
     }
   }
+  .md\:text-\[48px\] {
+    @media (width >= 48rem) {
+      font-size: 48px;
+    }
+  }
+  .md\:leading-0 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 0);
+      line-height: calc(var(--spacing) * 0);
+    }
+  }
   .md\:leading-\[32\.5px\] {
     @media (width >= 48rem) {
       --tw-leading: 32.5px;
       line-height: 32.5px;
+    }
+  }
+  .md\:leading-\[57\.6px\] {
+    @media (width >= 48rem) {
+      --tw-leading: 57.6px;
+      line-height: 57.6px;
+    }
+  }
+  .md\:leading-\[57\] {
+    @media (width >= 48rem) {
+      --tw-leading: 57;
+      line-height: 57;
     }
   }
   .xl\:block {
@@ -397,6 +485,21 @@
   .xl\:h-\[555px\] {
     @media (width >= 80rem) {
       height: 555px;
+    }
+  }
+  .xl\:w-\[60\%\] {
+    @media (width >= 80rem) {
+      width: 60%;
+    }
+  }
+  .xl\:w-\[70\%\] {
+    @media (width >= 80rem) {
+      width: 70%;
+    }
+  }
+  .xl\:w-\[80\%\] {
+    @media (width >= 80rem) {
+      width: 80%;
     }
   }
   .xl\:w-\[90\%\] {

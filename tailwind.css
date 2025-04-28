@@ -5,8 +5,16 @@
     url(./fonts/Ginto-Nord/Ginto-Nord-700.woff) format("woff");
 }
 
+@font-face {
+  font-family: "ggSans";
+  font-weight: 500;
+  src: url(fonts/gg-sans/ggsans-Medium.ttf);
+}
+
+
 @import "tailwindcss";
 
 @theme {
   --font-Ginto-Nord: GintoNord, sans-serif;
+  --font-ggsans: "ggSans", sans-serif;
 }
